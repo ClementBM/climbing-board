@@ -1,2 +1,2 @@
 # ClimbingBoard
-Minimal framework for climbing board
+A minimal framework for climbing board

@@ -1,0 +1,11 @@
+{
+    "python.linting.enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.pythonPath": "/home/clem/.local/share/virtualenvs/ClimbingBoard-EMlcHr86/bin/python",
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "test"
+    ]
+}

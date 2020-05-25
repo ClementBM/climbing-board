@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+pytest = "*"
+mypy = "*"
+jupyter = "*"
+notebook = "*"
+ipykernel = "*"
+
+[packages]
+scikit-learn = "*"
+scikit-image = "*"
+tinydb = "*"
+
+[requires]
+python_version = "3.8"
