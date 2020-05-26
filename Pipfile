@@ -15,6 +15,7 @@ ipykernel = "*"
 scikit-learn = "*"
 scikit-image = "*"
 tinydb = "*"
+pyyaml = "*"
 
 [requires]
 python_version = "3.8"

@@ -14,7 +14,7 @@ class BoulderProblemGeneration:
     self.available_holds = list(set(self.board.holds) - set(self.board.missing_holds))
     self.first_holds = [hold for hold in self.available_holds if hold.number in [str(i) for i in range(3, 11)]]
   
-  def random_ascending(self, length_max: int, distance_max: float):
+  def random_ascending(self, length_max: int, distance_max: float) -> List[Hold]:
     first_hold = random.choice(self.first_holds)
     holds = [first_hold]
 
