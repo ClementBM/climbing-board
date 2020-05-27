@@ -8,5 +8,8 @@
     "python.testing.pytestArgs": [
         "test"
     ],
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "[python]": {
+        "editor.formatOnSave": true
+    }
 }
