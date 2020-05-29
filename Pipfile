@@ -11,6 +11,8 @@ jupyter = "*"
 notebook = "*"
 ipykernel = "*"
 black = "*"
+sphinx = "*"
+sphinx-rtd-theme = "*"
 
 [packages]
 scikit-learn = "*"
