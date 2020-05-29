@@ -1,10 +1,9 @@
-from Board import Board
-from BoardPicture import BoardPicture
+from climbingboard.Board import Board
+from climbingboard.BoardPicture import BoardPicture
+from climbingboard.BoulderProblemGeneration import BoulderProblemGeneration
+from climbingboard.BoardService import BoardService
 
-from BoulderProblemGeneration import BoulderProblemGeneration
-from BoardService import BoardService
-
-from configuration import hold_positions, missing_holds
+from climbingboard.configuration import hold_positions, missing_holds
 
 if __name__ == "__main__":
     myBoard = Board(18, 12, 15, 15, missing_holds)

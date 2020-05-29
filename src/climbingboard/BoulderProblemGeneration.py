@@ -1,8 +1,8 @@
 import random
 from typing import List
 
-from Board import Board
-from Hold import Hold
+from climbingboard.Board import Board
+from climbingboard.Hold import Hold
 
 
 class BoulderProblemGeneration:

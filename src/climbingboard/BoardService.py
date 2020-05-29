@@ -1,7 +1,8 @@
 from typing import List
-from Hold import Hold
-from TinyDbContext import TinyDbContext
 from tinydb import Query
+
+from climbingboard.Hold import Hold
+from climbingboard.TinyDbContext import TinyDbContext
 
 
 class BoardService:

@@ -1,7 +1,8 @@
-from Comparable import Comparable
-from Position import Position
 import string
 from typing import Tuple
+
+from climbingboard.Comparable import Comparable
+from climbingboard.Position import Position
 
 
 class Hold(Comparable):
@@ -49,4 +50,3 @@ class Hold(Comparable):
 
     def __repr__(self):
         return f" {self.name} ({self.position.x},{self.position.y})"
-
