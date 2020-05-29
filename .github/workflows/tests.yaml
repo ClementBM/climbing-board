@@ -32,5 +32,7 @@ jobs:
         run: pipenv install --system --deploy --ignore-pipfile
       - name: install pytest
         run: pipenv install pytest --dev
+      - name: install package
+        run: pipenv run pip install -e .
       - name: run tests
-        run: pipenv run python -m pytest
+        run: pipenv run pytest
