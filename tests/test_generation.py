@@ -1,7 +1,7 @@
 import pytest
 
-from climbingboard.Board import Board
-from climbingboard.BoulderProblemGeneration import BoulderProblemGeneration
+from climbingboard.board import Board
+from climbingboard.boulderproblemgeneration import BoulderProblemGeneration
 
 
 def test_boulder_generation():

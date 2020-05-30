@@ -5,4 +5,3 @@ from enum import Enum, unique
 class HoldKind(Enum):
     FOOT = 1
     HAND = 2
-

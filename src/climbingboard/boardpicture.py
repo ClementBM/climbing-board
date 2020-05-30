@@ -1,7 +1,7 @@
 from typing import Dict, Tuple, List
 
 # from Board import Board
-from climbingboard.Hold import Hold
+from climbingboard.hold import Hold
 from climbingboard.Position import Position
 from climbingboard.Board import Board
 

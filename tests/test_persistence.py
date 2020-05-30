@@ -1,8 +1,8 @@
 import pytest
 import os
 
-from climbingboard.BoardService import BoardService
-from climbingboard.Board import Board
+from climbingboard.boardservice import BoardService
+from climbingboard.board import Board
 
 
 def test_database():

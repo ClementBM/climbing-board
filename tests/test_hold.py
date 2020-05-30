@@ -1,11 +1,11 @@
 import pytest
 import os
 
-from climbingboard.HoldKind import HoldKind
-from climbingboard.Position import Position
-from climbingboard.Hold import Hold
-from climbingboard.BoulderProblemHold import BoulderProblemHold
-from climbingboard.Board import Board
+from climbingboard.board import Board
+from climbingboard.hold import Hold
+from climbingboard.holdkind import HoldKind
+from climbingboard.position import Position
+from climbingboard.boulderproblemhold import BoulderProblemHold
 
 
 def test_hold_management():

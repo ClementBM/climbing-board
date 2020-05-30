@@ -1,7 +1,7 @@
 from os import linesep
 from typing import List
 
-from climbingboard.BoulderProblemHold import BoulderProblemHold
+from climbingboard.boulderproblemhold import BoulderProblemHold
 
 
 class BoulderProblem:

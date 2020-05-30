@@ -1,6 +1,6 @@
-from climbingboard.Hold import Hold
-from climbingboard.HoldKind import HoldKind
-from climbingboard.Position import Position
+from climbingboard.hold import Hold
+from climbingboard.holdkind import HoldKind
+from climbingboard.position import Position
 
 
 class BoulderProblemHold(Hold):

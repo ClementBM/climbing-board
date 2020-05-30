@@ -1,5 +1,5 @@
 # fmt: off
-hold_positions = {
+HOLD_POSITIONS = {
     "A1": (154, 1326),
     "A2": (143, 1280),
     "A3": (135, 1227),
@@ -229,7 +229,7 @@ hold_positions = {
     "L18": (1007, 126)
 }
 
-missing_holds = ["A1", "B1", "C1", "D1", "F1",
+MISSING_HOLDS = ["A1", "B1", "C1", "D1", "F1",
                  "A2", "B2", "D2", "E2", "F2",
                  "A3", "C3", "D3", "E3",
                  "A4", "B4", "C4", "E4", "F4",

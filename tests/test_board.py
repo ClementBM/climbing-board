@@ -1,5 +1,5 @@
 import pytest
-from climbingboard.Board import Board
+from climbingboard.board import Board
 
 
 def test_board_creation():

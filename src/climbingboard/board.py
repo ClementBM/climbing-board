@@ -2,8 +2,8 @@ import string
 from math import hypot
 from typing import List, Tuple
 
-from climbingboard.Hold import Hold
-from climbingboard.Position import Position
+from climbingboard.hold import Hold
+from climbingboard.position import Position
 
 
 class Board:

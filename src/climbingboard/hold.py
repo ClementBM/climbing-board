@@ -1,8 +1,8 @@
 import string
 from typing import Tuple
 
-from climbingboard.Comparable import Comparable
-from climbingboard.Position import Position
+from climbingboard.comparable import Comparable
+from climbingboard.position import Position
 
 
 class Hold(Comparable):
