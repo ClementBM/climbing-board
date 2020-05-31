@@ -38,5 +38,10 @@ jobs:
         run: pipenv run coverage run --source='src' -m pytest
       - name: code coverage report
         run: pipenv run coverage report
-      - name: code coverage html files
+      - name: Build code coverage html files
         run: pipenv run coverage html
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v1
+        with:
+          name: code-coverage-report
+          path: htmlcov
