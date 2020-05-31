@@ -2,8 +2,8 @@ from typing import Dict, Tuple, List
 
 # from Board import Board
 from climbingboard.hold import Hold
-from climbingboard.Position import Position
-from climbingboard.Board import Board
+from climbingboard.position import Position
+from climbingboard.board import Board
 
 from skimage import io
 from skimage.draw import circle_perimeter

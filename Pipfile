@@ -13,6 +13,7 @@ ipykernel = "*"
 black = "*"
 sphinx = "*"
 sphinx-rtd-theme = "*"
+coverage = "*"
 
 [packages]
 scikit-learn = "*"

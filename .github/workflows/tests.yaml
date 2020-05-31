@@ -35,4 +35,8 @@ jobs:
       - name: install package
         run: pipenv run pip install -e .
       - name: run tests
-        run: pipenv run pytest
+        run: pipenv run coverage run --source='src' -m pytest
+      - name: code coverage report
+        run: pipenv run coverage report
+      - name: code coverage html files
+        run: pipenv run coverage html

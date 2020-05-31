@@ -4,98 +4,58 @@ climbingboard package
 Submodules
 ----------
 
-climbingboard.Board module
+climbingboard.board module
 --------------------------
 
-.. automodule:: climbingboard.Board
+.. automodule:: climbingboard.board
    :members:
    :undoc-members:
    :show-inheritance:
 
-climbingboard.BoardPicture module
+climbingboard.boardpicture module
 ---------------------------------
 
-.. automodule:: climbingboard.BoardPicture
+.. automodule:: climbingboard.boardpicture
    :members:
    :undoc-members:
    :show-inheritance:
 
-climbingboard.BoardService module
+climbingboard.boardservice module
 ---------------------------------
 
-.. automodule:: climbingboard.BoardService
+.. automodule:: climbingboard.boardservice
    :members:
    :undoc-members:
    :show-inheritance:
 
-climbingboard.BoulderProblem module
+climbingboard.boulderproblem module
 -----------------------------------
 
-.. automodule:: climbingboard.BoulderProblem
+.. automodule:: climbingboard.boulderproblem
    :members:
    :undoc-members:
    :show-inheritance:
 
-climbingboard.BoulderProblemGeneration module
+climbingboard.boulderproblemgeneration module
 ---------------------------------------------
 
-.. automodule:: climbingboard.BoulderProblemGeneration
+.. automodule:: climbingboard.boulderproblemgeneration
    :members:
    :undoc-members:
    :show-inheritance:
 
-climbingboard.BoulderProblemHold module
+climbingboard.boulderproblemhold module
 ---------------------------------------
 
-.. automodule:: climbingboard.BoulderProblemHold
+.. automodule:: climbingboard.boulderproblemhold
    :members:
    :undoc-members:
    :show-inheritance:
 
-climbingboard.Comparable module
+climbingboard.comparable module
 -------------------------------
 
-.. automodule:: climbingboard.Comparable
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-climbingboard.ConfigurationService module
------------------------------------------
-
-.. automodule:: climbingboard.ConfigurationService
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-climbingboard.Hold module
--------------------------
-
-.. automodule:: climbingboard.Hold
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-climbingboard.HoldKind module
------------------------------
-
-.. automodule:: climbingboard.HoldKind
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-climbingboard.Position module
------------------------------
-
-.. automodule:: climbingboard.Position
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-climbingboard.TinyDbContext module
-----------------------------------
-
-.. automodule:: climbingboard.TinyDbContext
+.. automodule:: climbingboard.comparable
    :members:
    :undoc-members:
    :show-inheritance:
@@ -108,10 +68,58 @@ climbingboard.configuration module
    :undoc-members:
    :show-inheritance:
 
+climbingboard.configurationservice module
+-----------------------------------------
+
+.. automodule:: climbingboard.configurationservice
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+climbingboard.hold module
+-------------------------
+
+.. automodule:: climbingboard.hold
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+climbingboard.holdkind module
+-----------------------------
+
+.. automodule:: climbingboard.holdkind
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 climbingboard.main module
 -------------------------
 
 .. automodule:: climbingboard.main
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+climbingboard.position module
+-----------------------------
+
+.. automodule:: climbingboard.position
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+climbingboard.tinydbcontext module
+----------------------------------
+
+.. automodule:: climbingboard.tinydbcontext
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+climbingboard.version module
+----------------------------
+
+.. automodule:: climbingboard.version
    :members:
    :undoc-members:
    :show-inheritance:
