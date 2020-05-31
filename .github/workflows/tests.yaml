@@ -55,5 +55,5 @@ jobs:
       - name: Download badge
         uses: actions/download-artifact@v1
         with:
-          name: coverage-badge.svg
-          path: coverage.svg
+          name: coverage.svg
+          path: coverage-badge.svg
