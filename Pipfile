@@ -14,7 +14,6 @@ black = "*"
 sphinx = "*"
 sphinx-rtd-theme = "*"
 coverage = "*"
-coverage-badge = "*"
 
 [packages]
 scikit-learn = "*"

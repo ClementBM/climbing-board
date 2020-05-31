@@ -45,15 +45,3 @@ jobs:
         with:
           name: code-coverage-report
           path: htmlcov
-      - name: Build code coverage badge
-        run: pipenv run coverage-badge -o coverage.svg
-      - name: Archive code coverage badge
-        uses: actions/upload-artifact@v1
-        with:
-          name: coverage.svg
-          path: coverage.svg
-      - name: Download badge
-        uses: actions/download-artifact@v1
-        with:
-          name: coverage.svg
-          path: coverage-badge.svg
