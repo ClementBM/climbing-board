@@ -1,0 +1,42 @@
+# https://python-poetry.org/docs/pyproject/
+[tool.poetry]
+name = "climbing_board"
+version = "0.1.0"
+description = "Climbing board python package"
+authors = ["Clément Brutti-Mairesse <clement.brutti.mairesse@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/ClementBM/climbing-board"
+repository = "https://github.com/ClementBM/climbing-board"
+keywords = ["climbing", "climbing board"]
+include = [
+    "LICENSE",
+]
+# https://pypi.org/classifiers/
+classifiers = [
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.20.1"
+
+[tool.poetry.dev-dependencies]
+pylint = "*"
+pytest = "*"
+mypy = "*"
+jupyter = "*"
+notebook = "*"
+ipykernel = "*"
+black = "*"
+sphinx = "*"
+sphinx-rtd-theme = "*"
+coverage = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
