@@ -5,6 +5,7 @@ from enum import Enum, unique
 from typing import NamedTuple
 import numpy as np
 import string
+import pandas as pd
 
 
 @unique
@@ -49,21 +50,29 @@ class Hold(IHold):
     def __init__(
         self,
         name: str,
-        settings: dict,
+        settings: dict = {},
     ):
         self._name = name
         self._settings = settings
 
+    @property
     def name(self):
         return self._name
 
+    @property
     def settings(self):
         return self._settings
+
+    def __repr__(self):
+        return self.name
 
 
 class NoHold(IHold):
     name = "No_Hold"
     settings: dict = {}
+
+    def __repr__(self):
+        return self.name
 
 
 class Board:
@@ -74,27 +83,78 @@ class Board:
         horizontal_spacing: float,
         vertical_spacing: float,
     ):
+        """
+        :horizontal_spacing: mm
+        :vertical_spacing: mm
+        """
         self.horizontal_count = horizontal_count
         self.vertical_count = vertical_count
-        self.grid = np.full((horizontal_count, vertical_count), NoHold())
 
-        self.alpha_indices = string.ascii_uppercase[: self.horizontal_count]
+        self.horizontal_spacing = horizontal_spacing
+        self.vertical_spacing = vertical_spacing
+
+        self.alpha_indices = list(string.ascii_uppercase[: self.horizontal_count])
+
         self.number_indices = list(range(1, vertical_count + 1)[::-1])
 
-    def get_hold_by_alpha_num(self, alph_num) -> IHold:
-        letter = alph_num[:1]
-        number = int(alph_num[1:])
+        self.grid = pd.DataFrame(
+            NoHold(),
+            index=zip(
+                self.number_indices,
+                [
+                    vertical * vertical_spacing
+                    for vertical in range(self.vertical_count)[::-1]
+                ],
+            ),
+            columns=zip(
+                self.alpha_indices,
+                [
+                    horizontal * horizontal_spacing
+                    for horizontal in range(self.horizontal_count)
+                ],
+            ),
+        )
 
-        hold: IHold = self.grid[
-            self._letter_to_index(letter), self._number_to_index(number)
+    def get_hold_by_alpha_num(self, alph_num) -> IHold:
+        letter, number = self._split_alpha_num(alph_num)
+
+        hold: IHold = self.grid.iloc[
+            self.number_indices.index(number), self.alpha_indices.index(letter)
         ]
         return hold
 
-    def _letter_to_index(self, letter: str) -> int:
-        return self.alpha_indices.index(letter)
+    def add_hold_by_alpha_num(self, alph_num, hold: IHold):
+        letter, number = self._split_alpha_num(alph_num)
 
-    def _number_to_index(self, number: int) -> int:
-        return self.number_indices.index(number)
+        self.grid.iloc[
+            self.number_indices.index(number), self.alpha_indices.index(letter)
+        ] = hold
+
+    def _letter_to_index(self, letter: str):
+        return letter, self.horizontal_spacing * self.alpha_indices.index(letter)
+
+    def _number_to_index(self, number: int):
+        return number, self.vertical_spacing * self.number_indices.index(number)
+
+    def _split_alpha_num(self, alph_num):
+        letter = alph_num[:1]
+        number = int(alph_num[1:])
+        return letter, number
+
+    def get_distance(self, hold_1, hold_2):
+        coord_1 = self._get_coord_from_hold(hold_1)
+        coord_2 = self._get_coord_from_hold(hold_2)
+        return 0
+
+    def _get_coord_from_hold(self, alpha_num_value):
+        letter, number = self._split_alpha_num(alpha_num_value)
+        x = [i for i in self.grid.index if i[0] == number][0][1]
+        y = [i for i in self.grid.columns if i[0] == letter][0][1]
+
+        return Position(x=x, y=y)
+
+    def __repr__(self):
+        return repr(self.grid)
 
 
 class BoulderProblem:
