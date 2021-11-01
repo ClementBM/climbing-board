@@ -1,5 +1,5 @@
 import pytest
-from climbing_board.main import Board
+from climbing_board.main import Board, NoHold
 
 
 def test_board_creation():
@@ -17,3 +17,21 @@ def test_board_creation():
     hold_span = a1 - a2
     distance = hold_span.distance
     assert distance == 20.0
+
+
+def test_create_board():
+    board = pd.DataFrame(
+        data={
+            "A": [NoHold(), NoHold(), NoHold],
+            "B": [NoHold(), NoHold(), NoHold],
+            "C": [NoHold(), NoHold(), NoHold],
+        }
+    )
+
+    assert board
+
+
+def test_create_board_without_holds():
+    df = pd.DataFrame(NoHold(), index=["1", "2", "3"], columns=["A", "B"])
+
+    assert df
